@@ -1,15 +1,21 @@
 import pino from 'pino';
 import { Env } from '../environment';
 
-const logger = pino({
-	transport: {
-		target: Env.isDev ? 'pino-pretty' : '',
-		options: {
-			translateTime: 'SYS:dd-mm-yyyy HH:MM:ss',
-			ignore: 'pid,hostname'
+let config = {};
+
+if (Env.isDev) {
+	config = {
+		transport: {
+			target: 'pino-pretty',
+			options: {
+				translateTime: 'SYS:dd-mm-yyyy HH:MM:ss',
+				ignore: 'pid,hostname'
+			}
 		}
-	}
-});
+	};
+}
+
+const logger = pino(config);
 
 export const error = (message: string | object) => {
 	logger.error(message);
