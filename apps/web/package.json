@@ -24,6 +24,7 @@
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"pino-pretty": "^9.1.1",
 		"postcss": "^8.4.18",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
@@ -46,7 +47,6 @@
 		"fp-ts": "^2.12.3",
 		"open-props": "^1.4.16",
 		"pino": "^8.7.0",
-		"pino-pretty": "^9.1.1",
 		"uuid": "^9.0.0"
 	}
 }
