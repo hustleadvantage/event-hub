@@ -1,0 +1,15 @@
+{
+  "extends": "tsconfig/node.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "baseUrl": ".",
+    "paths": {
+      "$lib": ["src"],
+      "$lib/*": ["src/*"],
+      "$shared": ["src/shared"],
+      "$shared/*": ["src/shared/*"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

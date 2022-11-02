@@ -1,0 +1,12 @@
+{
+  "name": "upstash",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@upstash/redis": "^1.15.0",
+    "fp-ts": "^2.12.3",
+    "vite": "^3.2.2"
+  }
+}

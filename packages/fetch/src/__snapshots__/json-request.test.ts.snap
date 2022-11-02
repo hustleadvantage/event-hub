@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`json-request > snapshot 1`] = `
+{
+  "foo": "bar",
+}
+`;

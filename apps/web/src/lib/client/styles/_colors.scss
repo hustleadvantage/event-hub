@@ -1,0 +1,41 @@
+@import 'open-props/colors-hsl';
+
+:root {
+	--kai-black: 0 0% 0%;
+	--kai-white: 0 0% 100%;
+
+	// Brand Colors
+	--kai-primary: var(--light-primary, --lime-6-hsl);
+	--kai-primary-dark: var(--light-primary-dark, --lime-7-hsl);
+
+	--kai-secondary: var(--light-secondary, --blue-6-hsl);
+	--kai-secondary-dark: var(--light-secondary-dark, --blue-7-hsl);
+
+	--kai-accent: var(--light-accent, --teal-6-hsl);
+	--kai-accent-dark: var(--light-accent-dark, --teal-7-hsl);
+
+	--kai-background: var(--kai-white);
+
+	--kai-text: var(--gray-9-hsl);
+	--kai-text-on-color: var(--kai-white);
+
+	@media (prefers-color-scheme: dark) {
+		--kai-black: var(--gray-9-hsl);
+		--kai-white: var(--gray-1-hsl);
+
+		--kai-primary: var(--dark-primary, --lime-4-hsl);
+		--kai-primary-dark: var(--dark-primary-dark, --lime-5-hsl);
+
+		--kai-secondary: var(--dark-secondary, --blue-4-hsl);
+		--ka-secondary-dark: var(--dark-secondary-dark, --blue-5-hsl);
+
+		--kai-accent: var(--dark-accent, --teal-4-hsl);
+		--kai-accent-dark: var(--dark-accent-dark, --teal-5-hsl);
+
+		--kai-background: var(--gray-9-hsl);
+		--kai-surface: var(--kai-secondary);
+
+		--kai-text: var(--gray-3-hsl);
+		--kai-text-on-color: var(--kai-black);
+	}
+}
