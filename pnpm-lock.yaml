@@ -17,6 +17,7 @@ importers:
       '@playwright/test': ^1.25.0
       '@rgossiaux/svelte-headlessui': ^1.0.2
       '@sveltejs/adapter-auto': next
+      '@sveltejs/adapter-netlify': 1.0.0-next.83
       '@sveltejs/kit': next
       '@types/uuid': ^8.3.4
       '@typescript-eslint/eslint-plugin': ^5.27.0
@@ -48,6 +49,7 @@ importers:
       vite: ^3.1.0
     dependencies:
       '@rgossiaux/svelte-headlessui': 1.0.2_svelte@3.52.0
+      '@sveltejs/adapter-netlify': 1.0.0-next.83
       '@upstash/redis': 1.15.0
       date-fns: 2.29.3
       dotenv: 16.0.3
@@ -302,7 +304,6 @@ packages:
 
   /@iarna/toml/2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
-    dev: true
 
   /@jridgewell/resolve-uri/3.1.0:
     resolution: {integrity: sha512-F2msla3tad+Mfht5cJq7LSXcdudKTWCVYUgw6pLFOOHSTtZlj6SWNYAp+AhuqLmWdBO2X5hPrLcu8cVP8fy28w==}
@@ -524,7 +525,6 @@ packages:
       '@iarna/toml': 2.2.5
       esbuild: 0.15.12
       set-cookie-parser: 2.5.1
-    dev: true
 
   /@sveltejs/adapter-vercel/1.0.0-next.81:
     resolution: {integrity: sha512-cuNolQSqabSs97J2hn9bnRDOscihIO+VEYltsc+POLU/ecv7pbUm1qdRakeG3+ehK1mfZ9dub6vEVuLKhm+Qng==}
@@ -4085,7 +4085,6 @@ packages:
 
   /set-cookie-parser/2.5.1:
     resolution: {integrity: sha512-1jeBGaKNGdEq4FgIrORu/N570dwoPYio8lSoYLWmX7sQ//0JY08Xh9o5pBcgmHQ/MbsYp/aZnOe1s1lIsbLprQ==}
-    dev: true
 
   /shebang-command/2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
