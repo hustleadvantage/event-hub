@@ -8,3 +8,5 @@ node_modules
 !.env.example
 
 .netlify
+
+pnpm-lock.yaml
