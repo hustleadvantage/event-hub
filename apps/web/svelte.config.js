@@ -9,7 +9,7 @@ const config = {
 		postcss: true
 	}),
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({}),
 		alias: {
 			$client: 'src/lib/client',
 			'$client/*': 'src/lib/client/*',
@@ -19,7 +19,8 @@ const config = {
 
 			$shared: 'src/lib/shared',
 			'$shared/*': 'src/lib/shared/*'
-		}
+		},
+		outDir: '.svelte-kit'
 	}
 };
 
