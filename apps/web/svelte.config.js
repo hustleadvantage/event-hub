@@ -19,8 +19,7 @@ const config = {
 
 			$shared: 'src/lib/shared',
 			'$shared/*': 'src/lib/shared/*'
-		},
-		outDir: '.svelte-kit'
+		}
 	}
 };
 
