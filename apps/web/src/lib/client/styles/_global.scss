@@ -1,17 +1,17 @@
 @layer base {
-  html {
-    background-color: hsl(var(--kai-background));
-    color: hsl(var(--kai-text));
-    font-size: 1rem;
-  }
+	html {
+		background-color: hsl(var(--kai-background));
+		color: hsl(var(--kai-text));
+		font-size: 1rem;
+	}
 
-  .visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
+	.visually-hidden {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
 }
