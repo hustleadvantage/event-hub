@@ -21,7 +21,7 @@ const config = {
 			$shared: 'src/lib/shared',
 			'$shared/*': 'src/lib/shared/*'
 		},
-		outDir: path.resolve(__dirname, 'build')
+		outDir: './build'
 	}
 };
 
