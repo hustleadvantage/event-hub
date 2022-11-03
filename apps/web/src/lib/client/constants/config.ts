@@ -1,25 +1,7 @@
 import { option, string } from 'fp-ts';
 import { pipe } from 'fp-ts/lib/function';
 
-// Facebook
-const FACEBOOK_PIXEL_ID = import.meta.env.VITE_FACEBOOK_PIXEL_ID;
-
-// Google
-const GOOGLE_ANALYTICS_MEASUREMENT_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_MEASUREMENT_ID;
-const GOOGLE_MAPS_KEY = import.meta.env.VITE_GOOGLE_MAPS_KEY;
-
-// IP Info
-const IPINFO_KEY = import.meta.env.VITE_IPINFO_PUBLIC_KEY;
-
-// Plausible
-const PLAUSIBLE_DOMAIN = import.meta.env.VITE_PLAUSIBLE_DOMAIN;
-
-// Theme
-const COLOR_PRIMARY = import.meta.env.VITE_COLOR_PRIMARY;
-const COLOR_SECONDARY = import.meta.env.VITE_COLOR_SECONDARY;
-const COLOR_ACCENT = import.meta.env.VITE_COLOR_ACCENT;
-
-const varOrNone = (value: string | undefined) =>
+const varOption = (value: string | undefined) =>
 	pipe(
 		option.fromNullable(value),
 		option.chain(option.fromPredicate((s: string) => !string.isEmpty(s)))
@@ -28,27 +10,37 @@ const varOrNone = (value: string | undefined) =>
 const defaultOrValue = <T>(defaultValue: T, value: option.Option<T>) =>
 	option.getOrElse(() => defaultValue)(value);
 
+// Business
+export const BUSINESS = {
+	NAME: import.meta.env.VITE_BUSINESS_NAME as string
+};
+
+// Facebook
 export const FACEBOOK = {
-	PIXEL_ID: varOrNone(FACEBOOK_PIXEL_ID)
+	PIXEL_ID: varOption(import.meta.env.VITE_FACEBOOK_PIXEL_ID)
 };
 
+// Google
 export const GOOGLE = {
-	ANALYTICS_MEASUREMENT_ID: varOrNone(GOOGLE_ANALYTICS_MEASUREMENT_ID),
-	MAPS_PUBLIC_KEY: varOrNone(GOOGLE_MAPS_KEY)
+	ANALYTICS_MEASUREMENT_ID: varOption(import.meta.env.VITE_GOOGLE_ANALYTICS_MEASUREMENT_ID),
+	MAPS_PUBLIC_KEY: varOption(import.meta.env.VITE_GOOGLE_MAPS_KEY)
 };
 
+// IP Info
 export const IPINFO = {
-	PUBLIC_KEY: varOrNone(IPINFO_KEY)
+	PUBLIC_KEY: varOption(import.meta.env.VITE_IPINFO_PUBLIC_KEY)
 };
 
+// Plausible
 export const PLAUSIBLE = {
-	DOMAIN: varOrNone(PLAUSIBLE_DOMAIN)
+	DOMAIN: varOption(import.meta.env.VITE_PLAUSIBLE_DOMAIN)
 };
 
+// Theme
 export const THEME = {
 	COLORS: {
-		PRIMARY: defaultOrValue('violet', varOrNone(COLOR_PRIMARY)),
-		SECONDARY: defaultOrValue('teal', varOrNone(COLOR_SECONDARY)),
-		ACCENT: defaultOrValue('blue', varOrNone(COLOR_ACCENT))
+		PRIMARY: defaultOrValue('violet', varOption(import.meta.env.VITE_COLOR_PRIMARY)),
+		SECONDARY: defaultOrValue('teal', varOption(import.meta.env.VITE_COLOR_SECONDARY)),
+		ACCENT: defaultOrValue('blue', varOption(import.meta.env.VITE_COLOR_ACCENT))
 	}
 };

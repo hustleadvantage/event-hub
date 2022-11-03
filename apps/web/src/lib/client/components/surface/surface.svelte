@@ -20,7 +20,7 @@
     }
   }
 
-  .kai-surface {
+  .kai-surface:not([data-mode='dark']) {
     display: flex;
     flex-direction: column;
     width:100%;

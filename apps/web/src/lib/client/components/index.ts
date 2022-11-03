@@ -4,7 +4,7 @@ export * from './button';
 // export * from './card'
 // export * from './container';
 export * from './event';
-// export * from './footer';
+export * from './footer';
 // export * from './grid'
 // export * from './group'
 export * from './heading';

@@ -1,6 +1,7 @@
 <script>
 	import "$client/styles";
 	import { Analytics } from "$client/features";
+	import { Footer } from "$client/components";
 </script>
 
 <svelte:head>
@@ -9,6 +10,8 @@
 
 <!-- <Analytics /> -->
 
-<div class='max-w-screen-md mx-auto px-5 py-8'>
+
+<div class='grid gap-10'>
 	<slot />
+	<Footer />
 </div>

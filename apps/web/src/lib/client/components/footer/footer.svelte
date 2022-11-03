@@ -1,12 +1,13 @@
 <script lang="ts">
   import { Surface } from "../surface";
+	import { useFooterViewModel } from "./footer.view-model";
 
-  const year = new Date().getFullYear();
+  const { businessName, year } = useFooterViewModel();
 </script>
 
 <Surface>
   <div id='footer' class='kai-footer'>
-    &copy; {year} {BUSINESS.name}, All Rights Reserved.
+    &copy; {year} {businessName}, All Rights Reserved.
   </div>
 </Surface>
 
