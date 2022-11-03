@@ -1,7 +1,7 @@
 [build.environment]
   NODE_VERSION = "16"
-  NETLIFY_USE_PNPM = true
+  NETLIFY_USE_PNPM = "true"
 [build]
   base = "apps/web"
   publish = "./dist"
-  command = "pnpm install && cd ../.. && pnpm turbo run build --filter=web"
+  command = "cd ../.. && pnpm turbo run build --filter=web"
