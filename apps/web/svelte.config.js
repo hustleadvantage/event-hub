@@ -9,7 +9,7 @@ const config = {
 		postcss: true
 	}),
 	kit: {
-		adapter: adapter({}),
+		adapter: adapter(),
 		alias: {
 			$client: 'src/lib/client',
 			'$client/*': 'src/lib/client/*',
