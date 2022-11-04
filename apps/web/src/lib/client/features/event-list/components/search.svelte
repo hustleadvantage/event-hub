@@ -8,7 +8,7 @@
   <label for="search" class='grid gap-3 text-sm'>
     Search
     <div class='search-wrapper'>
-      <div class='absolute p-2'><Icon icon={SearchIcon} /></div>
+      <div class='p-2'><Icon icon={SearchIcon} /></div>
       <input name="search" type='text' bind:value on:input />
     </div>
   </label>
