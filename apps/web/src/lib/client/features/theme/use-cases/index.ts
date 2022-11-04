@@ -1,1 +1,1 @@
-export * from './create-css-tokens';
+export * from './create-css-tokens-style-tag';

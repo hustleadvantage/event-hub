@@ -1,17 +1,14 @@
-import { CONFIG } from '$client/constants';
 import { Theme } from '$client/features';
 import type { Handle } from '@sveltejs/kit';
 import { string } from 'fp-ts';
 import { pipe } from 'fp-ts/lib/function';
 
-const { COLORS } = CONFIG.THEME;
-
 export const handle: Handle = async ({ event, resolve }) => {
-	const colors = { primary: COLORS.PRIMARY, secondary: COLORS.SECONDARY, accent: COLORS.ACCENT };
-	const cssTokens = Theme.createCssTokens({ colors });
+	const cssTokensStyleTag = Theme.createCssTokensStyleTag();
 
 	const response = await resolve(event, {
-		transformPageChunk: ({ html }) => pipe(html, string.replace('%cssTokens%', cssTokens))
+		transformPageChunk: ({ html }) =>
+			pipe(html, string.replace('%cssTokensStyleTag%', cssTokensStyleTag))
 	});
 
 	return response;
