@@ -6,7 +6,7 @@
 </script>
 
 <div class='grid gap-2'>
-  <span class='text-sm'>Month</span>
+  <span class='text-sm'>Date</span>
   <ListBox bind:selected>
     <ListBox.Button slot='button'>{selected.label}</ListBox.Button>
     {#each options as option (option.key)}
