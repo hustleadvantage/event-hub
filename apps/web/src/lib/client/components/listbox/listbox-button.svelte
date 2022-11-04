@@ -22,7 +22,7 @@
 </ListboxButton>
 
 <style lang='scss' global>
-  .kai-listbox-button {
+  button.kai-listbox-button {
     position: relative;
     width: 100%;
     
@@ -30,7 +30,7 @@
     padding-left: .75rem;
     padding-right: 2.5rem;
 
-    background-color: hsl(var(--kai-secondary) / .12);
+    background-color: hsl(var(--kai-surface) / .12);
     border-radius: .5rem;
 
     font-size: 1rem;

@@ -11,7 +11,27 @@
 <!-- <Analytics /> -->
 
 
-<div class='grid gap-10'>
-	<slot />
+<div class='layout-wrapper'>
+	<main>
+		<slot />
+	</main>
 	<Footer />
 </div>
+
+<style lang='scss'>
+	:global(html, body) {
+		height: 100%;
+	}
+
+	.layout-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+
+		min-height: 100%;
+	}
+
+	main {
+		flex-grow: 1
+	}
+</style>

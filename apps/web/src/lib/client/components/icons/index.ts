@@ -7,4 +7,5 @@ export { default as HourGlassIcon } from './hour-glass.svelte';
 export { default as LocationIcon } from './location.svelte';
 export { default as MenuIcon } from './menu.svelte';
 export { default as PhoneIcon } from './phone.svelte';
+export { default as SearchIcon } from './search.svelte';
 export { default as TimeIcon } from './time.svelte';

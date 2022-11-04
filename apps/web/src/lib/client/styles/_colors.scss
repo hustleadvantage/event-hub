@@ -18,6 +18,7 @@
 
 	--kai-text: var(--gray-9-hsl);
 	--kai-text-on-color: var(--kai-white);
+	--kai-input-text: var(--kai-black);
 
 	@media (prefers-color-scheme: dark) {
 		--kai-black: var(--gray-9-hsl);

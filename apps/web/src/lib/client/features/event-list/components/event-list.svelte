@@ -1,23 +1,16 @@
 <script lang='ts'>
 	import { Title } from '$client/components';
 	import { CONFIG } from '$client/constants';
+	import EventListFilters from './event-list-filters.svelte';
   import EventListItem from './event-list-item.svelte';
   import { useEventListViewModel } from './event-list.view-model';
-  import MonthFilter from './month-filter.svelte';
-  import Search from './search.svelte';
 
   export let events: App.EventListItem[];
   export let searchParams: string = '';
 
   const businessName = CONFIG.BUSINESS.NAME;
 
-  const { 
-    filteredEvents, 
-    monthFilter, 
-    monthFilterOptions, 
-    searchTerm, 
-    searchEvents 
-  } = useEventListViewModel(events);
+  const { eventsStore } = useEventListViewModel({ events });
 </script>
   
 
@@ -27,13 +20,10 @@
       {businessName}
       <span class='block mt-2 text-4xl font-normal'>Upcoming Events</span>
     </Title>
-    <div class='flex items-start gap-8'>
-      <Search bind:value={$searchTerm} on:input={searchEvents} />
-      <MonthFilter options={monthFilterOptions} bind:selected={$monthFilter} />
-    </div>
-    {#if $filteredEvents.length}
+    <EventListFilters />
+    {#if $eventsStore.length}
       <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
-        {#each $filteredEvents as event (event.id)}
+        {#each $eventsStore as event (event.id)}
           <EventListItem {event} {searchParams} />
         {/each}
       </div>
